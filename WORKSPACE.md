@@ -1,4 +1,4 @@
-> 当前状态：网站源码及进度脚本已上传，自动部署工作流尚未启用。公开发布需要负责人明确确认，因此下方部署步骤暂不适用；目前可在本地预览网站，或通过 GitHub Issues 协作。
+> 当前状态：源码、进度脚本及自动部署工作流均已上传，公开发布已获负责人授权。尚未确认 Pages 上线；请在仓库 Settings → Pages 将 Source 设为 GitHub Actions，然后在 Actions 手动运行 Publish project workspace。部署成功后的实际网址以 Actions 输出为准。
 
 # 电氢协同 · 大创工作台
 
