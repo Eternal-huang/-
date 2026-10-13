@@ -30,6 +30,22 @@
 | 团队进度 | 查看 GitHub 提交生成的成员进度快照 |
 | 提交与讨论 | 生成进展报告、进入问题区、导入或导出本机草稿 |
 
+## 科研学习与论文准备
+
+工作台新增三个板块，并提供统一的科研记录编辑器：
+
+| 板块 | 可以做什么 | 团队共享入口 |
+| --- | --- | --- |
+| 论文阅读 | 按阶段和关键词筛选三篇起步文献，记录阅读状态、笔记与复现计划 | [阅读笔记](https://github.com/Eternal-huang/-/issues?q=is%3Aissue%20%22%5B%E9%98%85%E8%AF%BB%E7%AC%94%E8%AE%B0%5D%22) |
+| 研究问题与实验 | 记录候选问题、相关文献、公平对照、模型参数与真实结果 | [新建研究记录](https://github.com/Eternal-huang/-/issues/new/choose) |
+| 论文写作 | 按问题、模型、方法、证据及待补实验整理写作提纲 | [新建写作记录](https://github.com/Eternal-huang/-/issues/new/choose) |
+
+建议从 [论文阅读指南](docs/reading-guide.md) 开始：先读电氢储能综述，再读电解槽调频建模论文，最后对照近期预印本。每篇卡片都附来源链接与三个阅读问题。
+
+网页编辑器按记录类型和论文分别保存本机草稿，支持导出 / 复制 Markdown、生成 GitHub Issue。正式提交后，团队通过 Issues 查阅与讨论；这些记录不会混入每周仿真完成率。过长的笔记会先下载 Markdown，需把内容粘贴到 GitHub 页面再提交。
+
+起步文献不是完整的文献综述；预印本已单独标注。候选研究问题尚未确认为创新点，实验计划不能当作已完成结果。
+
 ## 当前任务安排
 
 ### 第一周：跑通三相配电网基础模型
@@ -128,6 +144,9 @@ GitHub 如果不支持直接上传某种文件，可以将成果打包为 ZIP，
 | --- | --- |
 | `dist/index.html` | 页面结构与项目说明 |
 | `dist/style.css` | 页面样式与移动端适配 |
+| `dist/research.js` | 论文筛选、独立草稿与科研记录提交 |
+| `docs/reading-guide.md` | 阅读顺序与笔记要求 |
+| `.github/ISSUE_TEMPLATE/` | 阅读、问题、实验与写作模板 |
 | `dist/app.js` | 任务数据、草稿保存、提交与进度展示 |
 | `dist/team-data.json` | 初始团队快照；部署时由脚本重新生成 |
 | `scripts/sync-progress.mjs` | 从 GitHub Issues 生成进度快照 |
