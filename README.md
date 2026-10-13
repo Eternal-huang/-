@@ -101,6 +101,22 @@ P_grid = P_load + P_el − P_bat
 
 GitHub 如果不支持直接上传某种文件，可以将成果打包为 ZIP，或填写团队认可的共享文件链接。
 
+## 上传与共享论文 PDF
+
+> 当前上传入口已可用。将 PDF 全文自动发布到网站的构建步骤尚未启用；上传后请先在仓库 `papers/` 目录查看。以下自动目录刷新步骤待启用后生效。
+
+点击网站“论文阅读”中的 **上传 PDF 到团队库**，或[直接进入上传页](https://github.com/Eternal-huang/-/upload/main/papers)。
+
+1. 使用有仓库写入权限的 GitHub 账号登录，选择或拖入 PDF（可多选，单文件不超过 25 MiB）。
+2. 建议文件名为 `年份_作者_标题.pdf`，网站会使用文件名生成标题。
+3. 在 GitHub 点击 **Commit changes**。若提交到新分支，需合并至 `main`。
+4. 等待 Pages 部署成功，返回正式网站点击“刷新论文库”，或按“团队上传”筛选。
+5. 点击“打开 PDF”阅读全文，也可以为上传论文填写笔记、导出 Markdown 或生成阅读 Issue。
+
+文件保存到仓库的 `papers/`，自动构建到网站。删除或替换文件后，下次成功部署重新生成目录。上传和自动生成目录都不依赖个人令牌，网站不会要求输入 GitHub 密码。
+
+正式网站公开展示文件，请上传可公开分享的版本；不适合分享全文时使用 DOI 或来源链接。负责人预览站不会随 GitHub 上传自动同步，以 GitHub Pages 正式版本为准。没有写入权限的成员可在阅读 Issue 中分享来源链接，请负责人收录。
+
 ## 团队进度如何更新
 
 正式 GitHub Pages 版本通过以下流程更新：
@@ -144,6 +160,9 @@ GitHub 如果不支持直接上传某种文件，可以将成果打包为 ZIP，
 | --- | --- |
 | `dist/index.html` | 页面结构与项目说明 |
 | `dist/style.css` | 页面样式与移动端适配 |
+| `papers/` | 团队上传的 PDF 原文件 |
+| `scripts/build-papers.mjs` | 校验 PDF 并生成网站论文目录 |
+| `dist/papers.json` | 部署时生成的团队论文索引 |
 | `dist/research.js` | 论文筛选、独立草稿与科研记录提交 |
 | `docs/reading-guide.md` | 阅读顺序与笔记要求 |
 | `.github/ISSUE_TEMPLATE/` | 阅读、问题、实验与写作模板 |
