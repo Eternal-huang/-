@@ -30,6 +30,8 @@ jobs:
         run: node scripts/sync-progress.mjs
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Block PDF files from public deployment
+        run: node scripts/check-public-assets.mjs
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
         with:
